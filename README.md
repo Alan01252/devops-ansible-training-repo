@@ -20,6 +20,7 @@ This guide assumings you've got a virtual machine capable of running docker.
 	`ssh -p 2020 -i ~/.ssh/id_rsa_insecure app-admin@127.0.0.1`
 - You should now be inside the box, awesome exit it
 	`exit`		
+- You'll now need to get SSH working in some way, you can either add a property to the file called "stage" or add the private key generated earlier to your ssh-agent. These have been left as an exercise for the reader
 - Run playbook
 	`ansible-playbook site.yml -i stage`
 
