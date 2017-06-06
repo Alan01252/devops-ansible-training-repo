@@ -18,6 +18,8 @@ This guide assumings you've got a virtual machine capable of running docker.
 	`chmod 600 ~/.ssh/id_rsa_insecure`
 - Test SSH connection
 	`ssh -p 2020 -i ~/.ssh/id_rsa_insecure app-admin@127.0.0.1`
+- You should now be inside the box, awesome exit it
+	`exit`		
 - Run playbook
 	`ansible-playbook site.yml -i stage`
 
