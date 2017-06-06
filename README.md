@@ -13,7 +13,7 @@ This guide assumings you've got a virtual machine capable of running docker.
 - Create centos image
 	`docker run -d \\n  --name ssh.pool-1.1.1 \\n  -p 2020:22 \\n  jdeathe/centos-ssh:centos-7`
 - Download private key
-	`curl -LSs \\n  https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant \\n  > ~/.ssh/id_rsa_insecure`
+	`curl -LSs https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant > ~/.ssh/id_rsa_insecure`
 - Change permissions of key
 	`chmod 600 ~/.ssh/id_rsa_insecure`
 - Test SSH connection
