@@ -17,7 +17,7 @@ This guide assumings you've got a virtual machine capable of running docker.
 - Change permissions of key
 	`chmod 600 ~/.ssh/id_rsa_insecure`
 - Test SSH connection
-	`ssh -p 2020 -i id_rsa_insecure app-admin@127.0.0.1`
+	`ssh -p 2020 -i ~/.ssh/id_rsa_insecure app-admin@127.0.0.1`
 - Run playbook
 	`ansible-playbook site.yml -i stage`
 
