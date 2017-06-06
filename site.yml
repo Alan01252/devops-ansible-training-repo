@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: Test we can send a message
+      debug:
+        msg: "Hello World"
+
+
