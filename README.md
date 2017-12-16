@@ -12,7 +12,7 @@ This guide assumings you've got a virtual machine capable of running docker.
 - Install Ansible
 - Create centos image
 	`docker run -d --name ssh.pool-1.1.1 -p 2020:22 jdeathe/centos-ssh:centos-7`
-- Download private key
+- Download private key ( public key is already authorised in above image )
 	`curl -LSs https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant > ~/.ssh/id_rsa_insecure`
 - Change permissions of key
 	`chmod 600 ~/.ssh/id_rsa_insecure`
@@ -20,9 +20,8 @@ This guide assumings you've got a virtual machine capable of running docker.
 	`ssh -p 2020 -i ~/.ssh/id_rsa_insecure app-admin@127.0.0.1`
 - You should now be inside the box, awesome exit it
 	`exit`		
-- You'll now need to get SSH working in some way, you can either add a property to the file called "stage" or add the private key generated earlier to your ssh-agent. These have been left as an exercise for the reader
 - Run playbook
-	`ansible-playbook site.yml -i stage`
+	`ansible-playbook site.yml -i stage --private-key ~/.ssh/id_rsa_insecure `
 
 If everything has worked you should see a hello world message from ansible on the server
  
